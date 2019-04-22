@@ -1,6 +1,10 @@
 # react-springboot-docker
-Minimal docker-compose development environment with Spring Boot backend and React frontend, supports hot reload using web-dev plugin on Spring Boot.
+Minimal development environment using docker-compose to tie a  Spring Boot backend and React frontend. Supports hot reloading of the backend using the web-dev plugin.
 
-1. Use Spring Initializr [https://start.spring.io/] to set up the backend
-2. Extract the tgz file (generated in step 1) into your project folder
-3. 
+== To create this project from scratch, using Docker ==
+1. Use [Spring Initializr] (https://start.spring.io/) to set up the backend folder
+     md be
+     docker run -v $(pwd)\be:/app -it openjdk sh -c "cd /app && curl https://start.spring.io/starter.tgz -d dependencies=web,devtools | tar zxvf - && ./mvnw install"
+2. Use create-react-app to set up the frontened folder
+    md fe
+    docker run -v C:\projects\react-springboot-docker\fe:/app -it node sh -c "cd /app && npm install -g create-react-app && create-react-app ."
