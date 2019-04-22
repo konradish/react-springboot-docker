@@ -1,7 +1,7 @@
 # react-springboot-docker
 Minimal development environment using docker-compose to tie a  Spring Boot backend and React frontend. Supports hot reloading of the backend using the web-dev plugin.
 
-==To create this project from scratch, using Docker==
+## To create this project from scratch, using Docker
 1. Create project folder
 2. Cd into the project folder
 3. Use [Spring Initializr](https://start.spring.io/) to set up the backend folder
