@@ -1,4 +1,7 @@
 FROM node
 WORKDIR /app
 EXPOSE 8080
-CMD ["npm", "start"]
+RUN cd /app && \
+    yarn install -g create-react-app && \
+    create-react-app .
+CMD ["yarn", "start"]
