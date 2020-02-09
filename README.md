@@ -2,9 +2,9 @@
 Start coding fast with this minimal development environment. Docker Compose ties a Spring Boot backend to a React frontend. Because the source files are mounted as a volume in the Docker container, Hot Reload works for the frontend and backend.
 
 ## To start the stack
-1. docker-compose up --build
-or (to run in background)
 1. docker-compose up --build -d
+
+### omit the -d to run in foreground
 
 ## To create this project from scratch, using just Docker
 ## Using PowerShell or Bash
