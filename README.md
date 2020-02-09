@@ -5,7 +5,7 @@ Start coding fast with this minimal development environment. Docker Compose ties
 1. docker-compose up --build  # -d to run in background
 
 ## To create this project from scratch, using just Docker
-## Using PowerShell or Bash
+## Using PowerShell or Bash or probably Mac
 1. Create project folder
 2. Cd into the project folder
 3. Use [Spring Initializr](https://start.spring.io/) to set up the backend folder
