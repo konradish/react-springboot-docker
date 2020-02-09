@@ -1,7 +1,12 @@
 # react-springboot-docker
-Minimal development environment using docker-compose to tie a  Spring Boot backend and React frontend. Supports hot reloading of the backend using the web-dev plugin.
+Start coding fast with this minimal development environment. Docker Compose ties a Spring Boot backend to a React frontend. Because the source files are mounted as a volume in the Docker container, Hot Reload works for the frontend and backend.
 
-## To create this project from scratch, using Docker
+## To start the stack
+1. docker-compose up --build
+or (to run in background)
+1. docker-compose up --build -d
+
+## To create this project from scratch, using just Docker
 ## Using PowerShell or Bash
 1. Create project folder
 2. Cd into the project folder
