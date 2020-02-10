@@ -2,4 +2,5 @@ FROM node
 # WORKDIR /app
 EXPOSE 8080
 COPY ./run-fe.sh /run.sh
+RUN chmod +x /run.sh
 CMD ["/run.sh"]
