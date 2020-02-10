@@ -2,16 +2,16 @@ version: '3'
 services:
   be:
     build:
-      context: ./be
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile-be
     volumes:
       - ./be:/app
     ports:
       - "8080"
   fe:
     build:
-      context: ./fe
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: Dockerfile-fe
     volumes:
       - ./fe:/app
     ports:
