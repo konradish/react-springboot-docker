@@ -2,9 +2,9 @@
 Start coding fast with this minimal development environment. Docker Compose ties a Spring Boot backend to a React frontend. Because the source files are mounted as a volume in the Docker container, Hot Reload works for the frontend and backend.
 
 # How the containers are created
-The backend is using the Spring Initializr via cURL to download and extract a Spring Boot starter project, then it is installed through the Maven wrapper mvnw
+The backend is created by cURL request to the Spring Initializr API. The generated backend is downloaded and extracted a Spring Boot starter project, then it is installed through the mvnw Maven wrapper
 
-The frontend is using yarn to install create-react-app and then calling yarn start
+The frontend invokes yarn to install create-react-app and then executes yarn start
 
 ## To start the stack
 1. docker-compose up --build  # -d to run in background
