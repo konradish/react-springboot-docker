@@ -16,13 +16,17 @@ The frontend and backend are stored in the folders 'fe' and 'be'. Both can be ed
 ## Using PowerShell or Bash or probably Mac
 1. Create project folder
 2. Cd into the project folder
-3. Use [Spring Initializr](https://start.spring.io/) to set up the backend folder
+3. Create a Docker network so the frontend and backend can connect with eachother
+```
+docker network create rsb
+```
+4. Use [Spring Initializr](https://start.spring.io/) to set up the backend folder
 ```
 mkdir be
-docker run -d -v $(pwd)/be:/app -it openjdk sh -c "cd /app && curl https://start.spring.io/starter.tgz -d dependencies=web,devtools | tar zxvf - && ./mvnw install && ./mvnw spring-boot:run"
+docker run --name rsb_be --network rsb -d -v $(pwd)/be:/app -it openjdk sh -c "cd /app && curl https://start.spring.io/starter.tgz -d dependencies=web,devtools | tar zxvf - && ./mvnw install && ./mvnw spring-boot:run"
 ```
-4. Use create-react-app to set up the frontend folder
+5. Use create-react-app to set up the frontend folder
 ```
 mkdir fe
-docker run -d -v $(pwd)/fe:/app -it node sh -c "cd /app && yarn global add create-react-app && create-react-app . && yarn start"
+docker run --name rsb_fe --network rsb -d -v $(pwd)/fe:/app -it node sh -c "cd /app && yarn global add create-react-app && create-react-app . && yarn start"
 ```
