@@ -19,10 +19,10 @@ The frontend and backend are stored in the folders 'fe' and 'be'. Both can be ed
 3. Use [Spring Initializr](https://start.spring.io/) to set up the backend folder
 ```
 mkdir be
-docker run -v $(pwd)/be:/app -it openjdk sh -c "cd /app && curl https://start.spring.io/starter.tgz -d dependencies=web,devtools | tar zxvf - && ./mvnw install && ./mvnw spring-boot:run"
+docker run -d -v $(pwd)/be:/app -it openjdk sh -c "cd /app && curl https://start.spring.io/starter.tgz -d dependencies=web,devtools | tar zxvf - && ./mvnw install && ./mvnw spring-boot:run"
 ```
 4. Use create-react-app to set up the frontend folder
 ```
 mkdir fe
-docker run -v $(pwd)/fe:/app -it node sh -c "cd /app && yarn global add create-react-app && create-react-app . && yarn start"
+docker run -d -v $(pwd)/fe:/app -it node sh -c "cd /app && yarn global add create-react-app && create-react-app . && yarn start"
 ```
