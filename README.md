@@ -12,8 +12,7 @@ The frontend invokes yarn to install create-react-app and then executes yarn sta
 ## Developing
 The frontend and backend are stored in the folders 'fe' and 'be'. Both can be edited directly on the host, and the changes will hot reload on the Docker container. If you are using IntelliJ remember to use Ctrl-F9 to regenerate the class file.
 
-## To create this project from scratch, using just Docker
-## Using PowerShell or Bash or probably Mac
+## To create this project from scratch, using just Docker on Linux or Mac
 1. Create project folder
 2. Cd into the project folder
 3. Create a Docker network so the frontend and backend can connect with eachother
