@@ -34,4 +34,4 @@ jobs:
         files: "be, fe"
     
     - name: "Check file permissions"
-      run: ls -la be/src/main/java/com/example/demo/DemoApplication.java
+      run: test -w be/src/main/java/com/example/demo/DemoApplication.java || exit -1
