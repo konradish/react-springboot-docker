@@ -27,3 +27,8 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: See what's running
       run: docker ps
+  
+    - name: "Check file existence"
+      uses: andstor/file-existence-action@v1
+      with:
+        files: "be, fe"
