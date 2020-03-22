@@ -32,3 +32,6 @@ jobs:
       uses: andstor/file-existence-action@v1
       with:
         files: "be, fe"
+    
+    - name: "Check file permissions"
+      run: ls -la be/src/main/java/com/example/demo/DemoApplication.java
