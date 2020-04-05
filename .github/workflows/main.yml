@@ -34,4 +34,4 @@ jobs:
         files: "be, fe"
     
     - name: "Check file permissions"
-      run: test -w be/src/main/java/com/example/demo/DemoApplication.java || echo "Java source file not writable on host file system:" $1; exit -1
+      run: test -w be/src/main/java/com/example/demo/DemoApplication.java
