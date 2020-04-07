@@ -43,4 +43,4 @@ jobs:
       run: test -w be/src/main/java/com/example/demo/DemoApplication.java
     
     - name: "Check file permissions for frontend"
-      run: test -w fe/src/App.js
+      run: ls -la fe/src/App.js && test -w fe/src/App.js
