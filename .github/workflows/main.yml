@@ -29,10 +29,10 @@ jobs:
       run: docker ps
 
     - name: "Docker frontend should be running"
-      run: docker-compose exec fe ls
+      run: docker-compose exec -T fe ls
 
     - name: "Docker backend should be running"
-      run: docker-compose exec be ls
+      run: docker-compose exec -T be ls
   
     - name: "Check file existence"
       uses: andstor/file-existence-action@v1
