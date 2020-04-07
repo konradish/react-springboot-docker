@@ -1,4 +1,4 @@
-# react-springboot-docker
+# react-springboot-docker ![CI](https://github.com/konradish/react-springboot-docker/workflows/CI/badge.svg)
 Start coding fast with this minimal development environment. Docker Compose ties a Spring Boot backend to a React frontend. Because the source files are mounted as a volume in the Docker container, Hot Reload works for the frontend and backend.
 
 # How the containers are created
