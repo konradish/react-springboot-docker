@@ -33,5 +33,14 @@ jobs:
       with:
         files: "be, fe"
     
-    - name: "Check file permissions"
+    - name: "Check file permissions for backend"
       run: test -w be/src/main/java/com/example/demo/DemoApplication.java
+    
+    - name: "Check file permissions for frontend"
+      run: test -w fe/src/App.js
+    
+    - name: "Docker frontend should be running"
+      run: docker-compose exec fe ls
+
+    - name: "Docker backend should be running"
+      run: docker-compose exec be ls
