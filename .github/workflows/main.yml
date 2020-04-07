@@ -27,6 +27,12 @@ jobs:
     # Runs a set of commands using the runners shell
     - name: See what's running
       run: docker ps
+
+    - name: "Docker frontend should be running"
+      run: docker-compose exec fe ls
+
+    - name: "Docker backend should be running"
+      run: docker-compose exec be ls
   
     - name: "Check file existence"
       uses: andstor/file-existence-action@v1
@@ -38,9 +44,3 @@ jobs:
     
     - name: "Check file permissions for frontend"
       run: test -w fe/src/App.js
-    
-    - name: "Docker frontend should be running"
-      run: docker-compose exec fe ls
-
-    - name: "Docker backend should be running"
-      run: docker-compose exec be ls
