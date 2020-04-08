@@ -1,7 +1,7 @@
 #!/bin/sh
 cd /app
 if [ ! -f ./package.json ]; then
-    yarn global add create-react-app@3.4.0
+    yarn global add create-react-app
     create-react-app .
 fi
 chmod -R 777 .
