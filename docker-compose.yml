@@ -16,3 +16,4 @@ services:
       - ./fe:/app
     ports:
       - "3000"
+    tty: true      
